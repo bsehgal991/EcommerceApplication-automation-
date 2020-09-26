@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.events.WebDriverEventListener;
+import org.testng.log4testng.Logger;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -24,6 +25,8 @@ public class BaseTest {
     public static EventFiringWebDriver e_driver;
 
     public static WebEventListener eventListener;
+
+    Logger log= Logger.getLogger(BaseTest.class);
 
 
     public BaseTest() throws IOException {

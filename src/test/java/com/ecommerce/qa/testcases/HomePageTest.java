@@ -5,6 +5,8 @@ import com.ecommerce.qa.pages.HomePage;
 import com.ecommerce.qa.pages.LoginPage;
 import com.ecommerce.qa.pages.SearchResultPage;
 import com.ecommerce.qa.util.TestUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -16,7 +18,7 @@ import java.io.IOException;
 public class HomePageTest extends BaseTest
 {
 
-
+    public static Logger log= LogManager.getLogger(HomePageTest.class.getName());
     LoginPage loginPage;
     HomePage homePage;
 
@@ -43,6 +45,7 @@ public class HomePageTest extends BaseTest
     @Test(priority=1)
     public void verifyHomePageTitleTest()
     {
+        log.info("checking home page title");
         String homepagetitle=homePage.verifyHomePageTitle();
         Assert.assertEquals(homepagetitle,"Amazon","HomePage Title not matched");
     }

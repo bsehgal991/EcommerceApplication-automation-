@@ -4,6 +4,7 @@
 
     <listeners>
         <listener class-name="com.ecommerce.qa.ExtentReportListener.ExtentReportListener"></listener>
+        <listener class-name="com.ecommerce.qa.util.MyTransformer"></listener>
     </listeners>
     <test  name="Ecommerce Application Test Cases">
 
